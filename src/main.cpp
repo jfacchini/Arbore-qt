@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     //app.setQuitOnLastWindowClosed(false);
       
     qmlRegisterType<Share>("Arbore", 1, 0, "Share");
+    qmlRegisterType<ShareFilter>("Arbore", 1, 0, "ShareFilter");
   
     QQmlApplicationEngine engine;
   

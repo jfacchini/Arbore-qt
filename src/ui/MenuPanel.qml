@@ -37,29 +37,29 @@ Rectangle {
                 name: "Share list"
                 image: "qrc:/images/dl"
                 element: 3
-                filter: "blah"
+                filter: "FilterType.ShareList"
             }
             ListElement {
                 name: "Inbox"
                 image: "qrc:/images/inbox"
                 element: 8
-                filter: "bloh"
+                filter: "FilterType.Inbox"
             }
             ListElement {
                 name: "My shares"
                 image: "qrc:/images/ul"
                 element: 3
-                filter: "blah"
+                filter: "FilterType.MyShares"
             }
             ListElement {
                 name: "Active shares"
                 image: "qrc:/images/infos"
-                filter: "bluh"
+                filter: "FilterType.ActiveShares"
             }
             ListElement {
                 name: "Starred"
                 image: "qrc:/images/fav"
-                filter: "bluh"
+                filter: "FilterType.Starred"
             }
         }
 
@@ -75,7 +75,7 @@ Rectangle {
                 anchors.fill: parent;
                 onClicked: {
                     menuList.currentIndex = index;
-                    // Todo something with filter
+                    shareModel.setFilterType(filter);
                 }
             }
 
